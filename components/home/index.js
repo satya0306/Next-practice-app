@@ -22,7 +22,7 @@ export default class Main extends Component {
     }
     render() {
         return (
-            <div className="container" style={{marginTop:"10px"}}>
+            <div style={{marginTop:"10px"}}>
                 <h2 style={{textAlign:"center"}}>List Of Posts</h2>
                 <div className="row">
                     {/* <div className="col-md-3"> */}
