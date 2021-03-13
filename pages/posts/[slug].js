@@ -12,7 +12,8 @@ export default class Detailpage extends Component {
     }
 
     componentDidMount() {
-       console.log(this.state.albums)
+    //    console.log(this.state.albums)
+    //    console.log(this.props.passString)
 
     }
     
@@ -63,7 +64,7 @@ export default class Detailpage extends Component {
 
 Detailpage.getInitialProps = async(context) =>{
     const { slug } = context.query;
-    const postRes = await fetch(`https://jsonplaceholder.typicode.com/posts/${slug}`)
+    const postRes = await fetch(`http://localhost:3002/users`)
     const postJson = await postRes.json()
 
     const albumsRes = await fetch(`https://jsonplaceholder.typicode.com/albums/${slug}/photos`)
