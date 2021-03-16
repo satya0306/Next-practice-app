@@ -14,9 +14,10 @@ export default class Main extends Component {
     }
 
     loadPostsData = () =>{
-        fetch('https://jsonplaceholder.typicode.com/posts')
+        fetch('http://localhost:3001/users')
             .then(response => response.json())
             .then(json => {
+                console.log(json)
                 this.setState({postsData:json},()=>console.log(this.state.postsData))
             })
     }
@@ -28,7 +29,7 @@ export default class Main extends Component {
                     {/* <div className="col-md-3"> */}
                     {this.state.postsData && this.state.postsData.length>0 && this.state.postsData.map(post=>{
                         return(
-                            <div className="col-md-3" key={post.id}>
+                            <div className="col-md-3" key={post._id}>
                                 <div className="card" style={{width: "18rem"}}>
                                     <div className="card-body">
                                         <h5 className="card-title">{post.title}</h5>

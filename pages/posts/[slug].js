@@ -64,7 +64,7 @@ export default class Detailpage extends Component {
 
 Detailpage.getInitialProps = async(context) =>{
     const { slug } = context.query;
-    const postRes = await fetch(`http://localhost:3002/users`)
+    const postRes = await fetch(`http://localhost:3001/users`)
     const postJson = await postRes.json()
 
     const albumsRes = await fetch(`https://jsonplaceholder.typicode.com/albums/${slug}/photos`)
